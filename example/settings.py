@@ -54,3 +54,10 @@ LOGGING = {
         },
     }
 }
+
+HOTKEYS = {
+            70:
+                {
+                    'link': '/test/'
+                }
+            }

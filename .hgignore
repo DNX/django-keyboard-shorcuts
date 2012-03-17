@@ -1,2 +1,5 @@
+build/
+dist/
+keyboard_shortcuts.egg-info/
 docs/_build
 .pyc$

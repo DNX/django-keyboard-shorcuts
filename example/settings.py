@@ -55,9 +55,8 @@ LOGGING = {
     }
 }
 
-HOTKEYS = {
-            70:
-                {
-                    'link': '/test/'
-                }
-            }
+# START keyboard_shortcuts settings #
+HOTKEYS = list()
+HOTKEYS.append({'keys': 'h',
+                'link': '/'})
+# END keyboard_shortcuts settings #

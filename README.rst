@@ -1,10 +1,7 @@
 
 ===========================================================================
-django-keyboard-shortcuts: DJANGO Background Image Slideshow + NAVIgation
+Django-keyboard-shortcuts: use the keyboard inside your web project
 ===========================================================================
-
-Django Keyboard Shortcuts
-=========================
 
 **Allow to use the keyboard instead of the mouse inside your web project**
 
@@ -56,12 +53,36 @@ First of all you must...
 Key and Character Codes
 -----------------------
 Very helpful pages resources here:
+
 http://www.w3.org/2002/09/tests/keys.html
+
 http://www.quirksmode.org/js/keys.html#t00
 
 How to test keyboard_shortcus?
 ==============================
 
-**Please** test keyboard_shortcus before using it in your project:
+Very simple::
 
-$ ./manage.py test keyboard_shortcus
+    $ ./manage.py test keyboard_shortcus
+
+
+Changelog
+=========
+
+0.0.3
+-----
+
+* included "keyboard_shortcuts/templates *" in MANIFEST.in
+* documentation updated
+* templatetags and utils are now tested
+
+0.0.2
+-----
+
+* added hotkeys templatetag
+* added an example project for testing purposes
+
+0.0.1
+-----
+
+* initial structure

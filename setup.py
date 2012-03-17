@@ -112,7 +112,7 @@ CLASSIFIERS = [
 
 setup(
     name='django-keyboard-shortcuts',
-    version='0.0.2',
+    version='0.0.3',
     url='https://bitbucket.org/DNX/django-keyboard-shorcuts/',
     license='BSD License',
     description='Allow to use the keyboard instead of the mouse inside your web project.',

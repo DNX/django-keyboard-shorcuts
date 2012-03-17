@@ -111,7 +111,7 @@ CLASSIFIERS = [
 ]
 
 setup(
-    name='keyboard_shortcuts',
+    name='django-keyboard-shortcuts',
     version='0.0.1',
     url='https://bitbucket.org/DNX/django-keyboard-shorcuts/',
     license='BSD License',

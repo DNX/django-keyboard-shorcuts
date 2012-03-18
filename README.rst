@@ -11,12 +11,6 @@ From Wikipedia: Keyboard shortcuts are typically an alternate means for invoking
 
 Learn more here: http://en.wikipedia.org/wiki/Keyboard_shortcut
 
-*************
-Documentation
-*************
-
-Please head over to our `documentation <http://readthedocs.org/>`_ for all
-the details on how to install, configure and use the django-keyboard-shortcuts.
 
 Installation
 ============
@@ -77,6 +71,13 @@ Very simple::
 
 Changelog
 =========
+
+0.0.4
+-----
+
+* now you can add multiple key combinations
+* improved tests
+* updated the documentation
 
 0.0.3
 -----

@@ -11,6 +11,13 @@ From Wikipedia: Keyboard shortcuts are typically an alternate means for invoking
 
 Learn more here: http://en.wikipedia.org/wiki/Keyboard_shortcut
 
+*************
+Documentation
+*************
+
+Please head over to our `documentation <http://readthedocs.org/>`_ for all
+the details on how to install, configure and use the django-keyboard-shortcuts.
+
 Installation
 ============
 
@@ -57,6 +64,8 @@ Very helpful pages resources here:
 http://www.w3.org/2002/09/tests/keys.html
 
 http://www.quirksmode.org/js/keys.html#t00
+
+http://unixpapa.com/js/key.html
 
 How to test keyboard_shortcus?
 ==============================

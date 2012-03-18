@@ -57,6 +57,6 @@ LOGGING = {
 
 # START keyboard_shortcuts settings #
 HOTKEYS = list()
-HOTKEYS.append({'keys': 'h',
+HOTKEYS.append({'keys': 'ctrl + z',
                 'link': '/'})
 # END keyboard_shortcuts settings #

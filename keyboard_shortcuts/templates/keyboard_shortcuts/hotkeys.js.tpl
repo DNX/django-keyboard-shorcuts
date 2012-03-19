@@ -1,5 +1,6 @@
 <script type="text/javascript">
     var hotkeys = {{ hotkeys|safe }};
+    var special_disabled = {{ special_disabled|lower }};
     var pressed_keys = new Array()
     var func = function(event) {
         var target;
@@ -10,7 +11,7 @@
         else if (event.srcElement) target = event.srcElement;
         if (target.nodeType == 3) // defeat Safari bug
                 target = target.parentNode;
-        if (target.type === "text" || target.nodeName === "SELECT" || target.nodeName === "TEXTAREA") {
+        if (special_disabled && (target.type === "text" || target.nodeName === "SELECT" || target.nodeName === "TEXTAREA")) {
             pressed_keys = [] // we reset pressed keys
             return
         }

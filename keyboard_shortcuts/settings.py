@@ -2,6 +2,9 @@ from django.conf import settings
 
 HOTKEYS = getattr(settings, 'HOTKEYS', list())
 
+# Disable shortcuts in some "special cases", when an input, a textarea or a select is active
+SPECIAL_DISABLED = getattr(settings, 'SPECIAL_DISABLED', True)
+
 KEY_CODES = {
                 'BACKSPACE': 8,
                 'TAB': 9,

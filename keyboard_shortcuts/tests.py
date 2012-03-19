@@ -12,6 +12,7 @@ class TemplateTagTest(TestCase):
         self.original_hotkeys = getattr(ks_settings, 'HOTKEYS')
         ks_settings.HOTKEYS = list()
         ks_settings.HOTKEYS.append({'keys': 'f', 'link': '/test/'})
+        ks_settings.SPECIAL_DISABLED = True
 
     def tearDown(self):
         ks_settings.HOTKEYS = self.original_hotkeys
@@ -36,6 +37,16 @@ class TemplateTagTest(TestCase):
         c = template.Context()
         s = t.render(c)
         self.assertIn(u"var hotkeys = {};", s)
+
+    def test_special_disabled(self):
+        ks_settings.SPECIAL_DISABLED = True
+        t = template.Template(self.template)
+        c = template.Context()
+        s = t.render(c)
+        self.assertIn(u"var special_disabled = true;", s)
+        ks_settings.SPECIAL_DISABLED = False
+        s = t.render(c)
+        self.assertIn(u"var special_disabled = false;", s)
 
 
 class UtilsTest(TestCase):

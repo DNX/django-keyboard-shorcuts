@@ -1,5 +1,6 @@
 from django.template import Library
 from keyboard_shortcuts.utils import get_processed_hotkeys
+from keyboard_shortcuts import settings as ks_settings
 
 register = Library()
 
@@ -14,4 +15,5 @@ def setup_hotkeys():
     """
     return {
         'hotkeys': get_processed_hotkeys(),
+        'special_disabled': ks_settings.SPECIAL_DISABLED,
     }

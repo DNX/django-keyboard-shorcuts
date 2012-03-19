@@ -207,7 +207,7 @@ Setup Hotkeys In Your Template
 
 Now all you need to do is to add **{% load hotkeys %}** and **{% setup_hotkeys %}** in yout template, and *django-keyboard-shortcuts* will do the rest for you... add event listeners and attend for any keypress.
 
-The easiest way to do that is to do that is to load hotkeys **{% load hotkeys %}** at the **top** of your "base" template and to setup **{% setup_hotkeys %}** the in your **<head>** section.
+The easiest way to do this is to load hotkeys **{% load hotkeys %}** at the **top** of your "base" template and to setup **{% setup_hotkeys %}** the in your **<head>** section.
 
 Example of "base.html" template::
 

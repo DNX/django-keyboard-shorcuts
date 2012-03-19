@@ -57,6 +57,7 @@ LOGGING = {
 
 # START keyboard_shortcuts settings #
 HOTKEYS = list()
-HOTKEYS.append({'keys': 'ctrl + h',
+HOTKEYS.append({'keys': 'g + h',  # go to home
                 'link': '/'})
+SPECIAL_DISABLED = True
 # END keyboard_shortcuts settings #

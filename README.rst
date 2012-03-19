@@ -251,7 +251,7 @@ Changelog
 =========
 
 0.0.6
----
+-----
 
 * you can now configure in your settings.py the behaviour in "special cases"
 * updated the documentation

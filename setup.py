@@ -5,6 +5,8 @@ from fnmatch import fnmatchcase
 from distutils.util import convert_path
 from setuptools import setup, find_packages
 
+VERSION = '0.0.5'
+
 
 def read(*parts):
     return codecs.open(os.path.join(os.path.dirname(__file__), *parts)).read()
@@ -112,7 +114,7 @@ CLASSIFIERS = [
 
 setup(
     name='django-keyboard-shortcuts',
-    version='0.0.4',
+    version=VERSION,
     url='https://bitbucket.org/DNX/django-keyboard-shorcuts/',
     license='BSD License',
     description='Allow to use the keyboard instead of the mouse inside your web project.',

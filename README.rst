@@ -72,7 +72,7 @@ Very simple::
 Changelog
 =========
 
-dev
+0.0.5
 -----
 
 * disabled hotkeys in selet and text type inputs

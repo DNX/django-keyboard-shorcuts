@@ -2,8 +2,18 @@
     var hotkeys = {{ hotkeys|safe }};
     var pressed_keys = new Array()
     var func = function(event) {
+        var target;
         event = event || window.event;
         code = event.keyCode || event.which;
+        // check if we are in input
+        if (event.target) target = event.target;
+        else if (event.srcElement) target = event.srcElement;
+        if (target.nodeType == 3) // defeat Safari bug
+                target = target.parentNode;
+        if (target.type === "text" || target.nodeName === "SELECT" || target.nodeName === "TEXTAREA") {
+            pressed_keys = [] // we reset pressed keys
+            return
+        }
         combinations = hotkeys
         if (pressed_keys.length) { // we have some pressed keys
             for (array_key in pressed_keys) {

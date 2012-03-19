@@ -72,6 +72,11 @@ Very simple::
 Changelog
 =========
 
+dev
+-----
+
+* disabled hotkeys in selet and text type inputs
+
 0.0.4
 -----
 
@@ -82,7 +87,7 @@ Changelog
 0.0.3
 -----
 
-* included "keyboard_shortcuts/templates *" in MANIFEST.in
+* included "keyboard_shortcuts/templates \*" in MANIFEST.in
 * documentation updated
 * templatetags and utils are now tested
 

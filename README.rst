@@ -72,6 +72,12 @@ Very simple::
 Changelog
 =========
 
+dev
+-----
+
+* you can now configure in your settings.py the behaviour in "special cases"
+* improved tests
+
 0.0.5
 -----
 

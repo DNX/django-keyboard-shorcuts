@@ -3,6 +3,7 @@ from keyboard_shortcuts import settings as ks_settings
 from django.test import TestCase
 from keyboard_shortcuts.utils import get_processed_hotkeys
 from keyboard_shortcuts.utils import get_key_codes
+from keyboard_shortcuts.utils import get_combination_action
 
 
 class TemplateTagTest(TestCase):
@@ -29,6 +30,20 @@ class TemplateTagTest(TestCase):
         ks_settings.HOTKEYS.append({'keys': 'n', 'link': '/next/'})
         s = t.render(c)
         self.assertIn(u"var hotkeys = {78: {'link': '/next/'}, 70: {'link': '/test2/'}};", s)
+        # more actions for one combination
+        ks_settings.HOTKEYS = [{'keys': 'j', 'js': 'alert(\'J pressed\');', 'link': '/test/'}]
+        s = t.render(c)
+        self.assertIn(u"var hotkeys = {74: {'link': '/test/'}};", s)
+
+    def test_hotkey_to_js(self):
+        ks_settings.HOTKEYS = [{'keys': 'j', 'js': 'alert(\'J pressed\');'}]
+        t = template.Template(self.template)
+        c = template.Context()
+        s = t.render(c)
+        self.assertIn(u"var hotkeys = {74: {\'js\': \"alert(\'J pressed\');\"", s)
+        ks_settings.HOTKEYS = [{'keys': 'j', 'js': '$(\'#elem\').hide();'}]
+        s = t.render(c)
+        self.assertIn(u"var hotkeys = {74: {\'js\': \"$('#elem').hide();\"", s)
 
     def test_invalid_hotkeys(self):
         ks_settings.HOTKEYS = list()
@@ -132,3 +147,13 @@ class UtilsTest(TestCase):
         self.assertEquals(codes, [])
         codes = get_key_codes('CTRL X')
         self.assertEquals(codes, [])
+
+    def test_get_combination_action(self):
+        action = get_combination_action({'keys': 'a'})
+        self.assertEquals(action, {})
+        action = get_combination_action({'keys': 'a', 'not_valid': 'func();'})
+        self.assertEquals(action, {})
+        action = get_combination_action({'keys': 'a', 'link': '/test/'})
+        self.assertEquals(action, {'link': '/test/'})
+        action = get_combination_action({'keys': 'a', 'js': 'func();'})
+        self.assertEquals(action, {'js': 'func();'})

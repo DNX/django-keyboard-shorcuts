@@ -26,6 +26,10 @@
                 window.location.href = combinations[code]['link'];
                 pressed_keys = [] // we reset pressed keys
             }
+            else if (combinations[code]['js']) {
+                eval(combinations[code]['js']);
+                pressed_keys = [] // we reset pressed keys
+            }
             else {
                 pressed_keys.push(code)
             }

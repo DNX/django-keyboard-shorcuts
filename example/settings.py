@@ -56,8 +56,11 @@ LOGGING = {
 }
 
 # START keyboard_shortcuts settings #
-HOTKEYS = list()
-HOTKEYS.append({'keys': 'g + h',  # go to home
-                'link': '/'})
+HOTKEYS = [
+            {'keys': 'g + h',  # go home
+            'link': '/'},
+            {'keys': 'j+s',  # execute javascript code
+            'js': 'alert(\'J+S pressed!\')'},
+        ]
 SPECIAL_DISABLED = True
 # END keyboard_shortcuts settings #

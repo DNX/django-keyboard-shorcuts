@@ -117,7 +117,7 @@ setup(
     version=VERSION,
     url='https://bitbucket.org/DNX/django-keyboard-shorcuts/',
     license='BSD License',
-    description='Allow to use the keyboard instead of the mouse inside your web project.',
+    description='Helps to use the keyboard inside your web project.',
     long_description=read('README.rst'),
     author='Denis Darii',
     author_email='denis.darii@gmail.com',

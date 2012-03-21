@@ -59,8 +59,10 @@ LOGGING = {
 HOTKEYS = [
             {'keys': 'g + h',  # go home
             'link': '/'},
-            {'keys': 'j+s',  # execute javascript code
+            {'keys': 'j + s',  # execute javascript code
             'js': 'alert(\'J+S pressed!\')'},
+            {'keys': 'g + b',
+            'js': 'javascript:history.back();'},
         ]
 SPECIAL_DISABLED = True
 # END keyboard_shortcuts settings #

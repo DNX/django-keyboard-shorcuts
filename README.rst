@@ -112,6 +112,8 @@ Example::
     HOTKEYS = [
                 {'keys': 'g + h',  # go home
                 'link': '/'},
+                {'keys': 'g + j',  # go home
+                'js': 'javascript_code();'},
             ]
     SPECIAL_DISABLED = True
     # END keyboard_shortcuts settings #

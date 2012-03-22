@@ -1,2 +1,3 @@
 django
+django_coverage
 django-keyboard-shortcuts

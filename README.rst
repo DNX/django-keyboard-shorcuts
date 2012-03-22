@@ -8,14 +8,28 @@ Django-keyboard-shortcuts
 The project code and bugtracker is hosted on
 `Bitbucket <https://bitbucket.org/DNX/django-keyboard-shorcuts/>`_ and `Github <https://github.com/DNX/django-keyboard-shorcuts/>`_.
 
+The only dependency is Django itself
+------------------------------------
+Just **install**, **configure**, and you are ready to **dominate the world** with your website keyboard shortcuts.
+
+100% test coverage for every bit of code!
+-----------------------------------------
+**./manage.py test keyboard_shortcuts** coverage output::
+
+    Name                                      Stmts   Miss  Cover   Missing
+    -----------------------------------------------------------------------
+    keyboard_shortcuts.models                     0      0   100%
+    keyboard_shortcuts.templatetags.hotkeys       3      0   100%
+    keyboard_shortcuts.utils                     35      0   100%
+    keyboard_shortcuts.views                      0      0   100%
+    -----------------------------------------------------------------------
+    TOTAL                                        38      0   100%
+
+
 Don't uses any javascript framework!
 ------------------------------------
 
 On the client side you will have only pure javascript code that receives all pre-elaborated and optimized data directly from django.
-
-The only dependency is Django itself
-------------------------------------
-Just **install**, **configure**, and you are ready to **dominate the world** with your website keyboard shortcuts.
 
 ============
 Installation

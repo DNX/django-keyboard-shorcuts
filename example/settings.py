@@ -16,6 +16,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'django_coverage',
     'keyboard_shortcuts',
 )
 MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media')
